@@ -1,0 +1,52 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string name;
+    int rollNo;
+    float subject1, subject2, subject3;
+    float total, percentage;
+
+    cout << "Enter Student Name: ";
+    cin >> name;
+
+    cout << "Enter Roll Number: ";
+    cin >> rollNo;
+
+    cout << "Enter marks of Subject 1: ";
+    cin >> subject1;
+
+    cout << "Enter marks of Subject 2: ";
+    cin >> subject2;
+
+    cout << "Enter marks of Subject 3: ";
+    cin >> subject3;
+
+    total = subject1 + subject2 + subject3;
+    percentage = (total / 300) * 100;
+
+    cout << "\n----- Student Result -----";
+    cout << "\nName: " << name;
+    cout << "\nRoll Number: " << rollNo;
+    cout << "\nTotal Marks: " << total;
+    cout << "\nPercentage: " << percentage << "%";
+
+    if (percentage >= 80)
+        cout << "\nGrade: A";
+
+    else if (percentage >= 70)
+        cout << "\nGrade: B";
+
+    else if (percentage >= 60)
+        cout << "\nGrade: C";
+
+    else if (percentage >= 50)
+        cout << "\nGrade: D";
+
+    else
+        cout << "\nGrade: Fail";
+
+    return 0;
+}
